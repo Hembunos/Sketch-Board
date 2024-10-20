@@ -130,7 +130,7 @@ download.addEventListener("click", (e) => {
 
   let a = document.createElement("a");
   a.href = url;
-  a.download = "board.jpg";
+  a.download = "board.png";
   a.click();
 })
 
