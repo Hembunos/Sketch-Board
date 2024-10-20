@@ -10,7 +10,10 @@ let server = app.listen(port, () => {
   console.log("Listening to port " + port);
 })
 
-let io = socket(server);
+let io = socket(server, {cors: {
+  origin: "https://sketch-board-zeta.vercel.app/",
+  // credentials: true,
+},});
 
 io.on("connection", (socket) => {
   console.log("Made socket connection");
